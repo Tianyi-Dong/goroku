@@ -1,0 +1,21 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "Minimal capabilities: window chrome, native open/save dialogs, and file read/write scoped to the user's home directory (needed for backup-folder / export / import — see fileBackup.ts and dataExport.ts). No shell access, no broad filesystem access.",
+  "windows": [
+    "main"
+  ],
+  "permissions": [
+    "core:default",
+    "dialog:default",
+    "fs:allow-write-file",
+    "fs:allow-read-file",
+    "fs:allow-exists",
+    {
+      "identifier": "fs:scope",
+      "allow": [
+        "$HOME/**"
+      ]
+    }
+  ]
+}

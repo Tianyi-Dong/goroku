@@ -1,0 +1,20 @@
+node_modules
+dist
+.DS_Store
+
+# Personal / machine-local files — never commit these.
+# Real Tauri bundle identifier override (auto-merged over tauri.conf.json on macOS).
+# Copy src-tauri/tauri.macos.conf.json.example to this name and edit.
+src-tauri/tauri.macos.conf.json
+
+# Claude Code local state: per-machine permissions and auto-memory (path contains the OS username)
+.claude/settings.local.json
+.claude/projects/
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Project spec / Claude Code instructions — kept local, not committed.
+CLAUDE.md
